@@ -12,7 +12,7 @@ public class ApartmentBuilding extends Building {
 
     }
 
-    public ApartmentBuilding(int floors, String color, boolean garage, boolean elevator, int buildingID) {
+    public ApartmentBuilding(String floors, String color, boolean garage, boolean elevator, int buildingID) {
         super(floors, color, garage, elevator, buildingID);
         this.aptPerFloor = aptPerFloor;
     }
@@ -32,8 +32,8 @@ public class ApartmentBuilding extends Building {
 
     @Override
     public String toString() {
-        return String.format("Apartment building: \n" +
-                        " floors: %d \n" +
+        return String.format("Configuration: \n" +
+                        " floors: %s \n" +
                         " color: %s \n" +
                         " garage: %b \n" +
                         " elevator: %b \n" +

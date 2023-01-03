@@ -14,6 +14,11 @@ public class Order {
 
     private String typeOfBuilding;
 
+    private String color;
+    private boolean isElevator;
+    private boolean isGarage;
+    private String floors;
+
     //Constructors
     public Order(int orderID, int clientID) {
         this.orderID = orderID;
@@ -69,9 +74,17 @@ public class Order {
         this.typeOfBuilding = typeOfBuilding;
     }
 
+    public String getColor() {
+        return color;
+    }
+
+    public void setColor(String color) {
+        this.color = color;
+    }
+
     @Override
     public String toString() {
-        return String.format("Order info: \n " +
+        return String.format("Order info: \n" +
                         " person name: %s \n" +
                         " client phone number: %s \n" +
                         " client ID: %d \n" +
@@ -94,5 +107,27 @@ public class Order {
         System.out.println("order ID: " + orderID);
     }
 
+    public boolean isElevator() {
+        return isElevator;
+    }
 
+    public void setElevator(boolean elevator) {
+        isElevator = elevator;
+    }
+
+    public boolean isGarage() {
+        return isGarage;
+    }
+
+    public void setGarage(boolean garage) {
+        isGarage = garage;
+    }
+
+    public String getFloors() {
+        return floors;
+    }
+
+    public void setFloors(String floors) {
+        this.floors = floors;
+    }
 }

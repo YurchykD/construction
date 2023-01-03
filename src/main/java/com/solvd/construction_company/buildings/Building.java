@@ -4,7 +4,7 @@ import com.solvd.construction_company.exception.IdException;
 
 public abstract class Building {
     //Characteristics
-    private int floors;
+    private String floors;
     private String color;
     private boolean garage;
     private boolean elevator;
@@ -12,14 +12,14 @@ public abstract class Building {
 
     //Constructors
     public Building() {
-        this.floors = 2;
+        this.floors = "2";
         this.color = "gray";
         this.garage = true;
         this.elevator = false;
         this.buildingID = 1;
     }
 
-    public Building(int floors, String color, boolean garage, boolean elevator, int buildingID) {
+    public Building(String floors, String color, boolean garage, boolean elevator, int buildingID) {
         this.floors = floors;
         this.color = color;
         this.garage = garage;
@@ -28,11 +28,11 @@ public abstract class Building {
     }
 
     //Methods
-    public int getFloors() {
+    public String getFloors() {
         return floors;
     }
 
-    public void setFloors(int floors) {
+    public void setFloors(String floors) {
         this.floors = floors;
     }
 

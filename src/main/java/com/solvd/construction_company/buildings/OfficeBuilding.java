@@ -13,7 +13,7 @@ public class OfficeBuilding extends Building {
 
     }
 
-    public OfficeBuilding(int floors, String color, boolean garage, boolean elevator, int buildingID) {
+    public OfficeBuilding(String floors, String color, boolean garage, boolean elevator, int buildingID) {
         super(floors, color, garage, elevator, buildingID);
         this.withRepair = withRepair;
     }
@@ -33,13 +33,18 @@ public class OfficeBuilding extends Building {
 
     @Override
     public String toString() {
-        return String.format("office building floors: %d, building ID: %d, with repair: %b",
+        return String.format("Configuration: \n" +
+                        " floors: %s \n" +
+                        " color: %s \n" +
+                        " garage: %b \n" +
+                        " elevator: %b \n" +
+                        " building ID: %d",
                 getFloors(),
-                getBuildingID(),
-                withRepair);
-    }
-
-    ;
+                getColor(),
+                isGarage(),
+                isElevator(),
+                getBuildingID());
+    };
 
     @Override
     public boolean equals(Object o) {

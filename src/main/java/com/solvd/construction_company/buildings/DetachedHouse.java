@@ -12,7 +12,7 @@ public class DetachedHouse extends Building {
 
     }
 
-    public DetachedHouse(int floors, String color, boolean garage, boolean elevator, int buildingID) {
+    public DetachedHouse(String floors, String color, boolean garage, boolean elevator, int buildingID) {
         super(floors,
                 color,
                 garage,
@@ -36,15 +36,18 @@ public class DetachedHouse extends Building {
 
     @Override
     public String toString() {
-        return String.format("detached house floors: %d," +
-                        " building ID: %d," +
-                        " with backyard: %b",
+        return String.format("Configuration: \n" +
+                        " floors: %s \n" +
+                        " color: %s \n" +
+                        " garage: %b \n" +
+                        " elevator: %b \n" +
+                        " building ID: %d",
                 getFloors(),
-                getBuildingID(),
-                backyard);
-    }
-
-    ;
+                getColor(),
+                isGarage(),
+                isElevator(),
+                getBuildingID());
+    };
 
     @Override
     public boolean equals(Object o) {

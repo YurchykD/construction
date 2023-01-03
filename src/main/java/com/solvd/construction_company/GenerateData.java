@@ -61,9 +61,9 @@ public class GenerateData {
 
     public static HashMap<String, Building> generateBuildings() {
         HashMap<String, Building> building = new HashMap<>();
-        building.putIfAbsent("Apart", new ApartmentBuilding(30, "gray", false, true, 1));
-        building.putIfAbsent("Detach", new DetachedHouse(2, "yellow", true, false, 2));
-        building.putIfAbsent("Office", new OfficeBuilding(10, "white", true, true, 3));
+        building.putIfAbsent("Apart", new ApartmentBuilding("30", "gray", false, true, 1));
+        building.putIfAbsent("Detach", new DetachedHouse("2", "yellow", true, false, 2));
+        building.putIfAbsent("Office", new OfficeBuilding("10", "white", true, true, 3));
         return building;
     }
 }
